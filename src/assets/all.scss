@@ -1,5 +1,3 @@
-$primary-bg: #005757;
-
-body {
-    background-color: $primary-bg;
-}
+@import 'bootstrap/scss/functions';
+@import './variables';
+@import 'bootstrap/scss/bootstrap';

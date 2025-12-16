@@ -14,10 +14,13 @@ function App() {
   const modalRef = useRef(null)
   const customModal = useRef(null)
 
+  // 運用解構的方式加入環境變數
+  const { VITE_APP_PATH } = import.meta.env;
+
   // 匯入axios
   useEffect(() => {
     (async () => {
-      const res = await axios.get('https://randomuser.me/api/')
+      const res = await axios.get(VITE_APP_PATH)
       console.log(res);
 
       // 在載入完axios後打開及關閉modal
